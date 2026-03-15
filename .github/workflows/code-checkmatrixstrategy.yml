@@ -16,9 +16,9 @@ jobs:
             - name: Code Checkout 
               uses: actions/checkout@v5
             
-            - name: Setup Python ${{strategy.matrix.python-version}}
+            - name: Setup Python ${{matrix.python-version}}
               uses: actions/setup-python@v5
-              with: ${{strategy.matrix.python-version}}
+              with: ${{matrix.python-version}}
 
             - name: Install All Packages 
               run: pip install -r requirements.txt
