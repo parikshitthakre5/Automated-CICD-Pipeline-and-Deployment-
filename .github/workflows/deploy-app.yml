@@ -1,0 +1,17 @@
+name: Deploy Flask App 
+on:
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        env:
+            DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v5
+
+            - name: Deploy with Docker Compose
+              run: docker compose up --build -d
+
+            
