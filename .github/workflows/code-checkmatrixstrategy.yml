@@ -18,7 +18,8 @@ jobs:
             
             - name: Setup Python ${{matrix.python-version}}
               uses: actions/setup-python@v5
-              with: ${{matrix.python-version}}
+              with: 
+                  python-version: ${{matrix.python-version}}
 
             - name: Install All Packages 
               run: pip install -r requirements.txt
