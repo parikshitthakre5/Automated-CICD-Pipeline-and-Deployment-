@@ -6,6 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+        
         steps:
             - name: SSH to Prod Server
               uses: appleboy/ssh-action@v1.0.3
