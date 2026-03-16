@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Copy src code to container
 
-
+RUN apt-get update && apt-get upgrade -y
 COPY . .
 
 # Run the build commands
